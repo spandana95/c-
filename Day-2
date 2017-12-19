@@ -1,0 +1,73 @@
+------------------------------------------------------------
+PRINT VALUE OF BOOLEAN VARIABLE
+#include <iostream>
+
+#define True 1 
+
+using namespace std;
+
+
+int main()
+{
+printf("value = ",true;
+
+
+}
+
+------------------------------------------------------------
+PRINT MEMORY OF DATATYPE OF BOOLEAN VARIABLE
+#include <iostream>
+
+#define True 1 
+
+using namespace std;
+
+
+int main() 
+{
+printf(" %d ",true;
+
+
+}
+
+-------------------------------------------------------------
+PRINT  VALUES IN DESCENDING ORDER
+#include <iostream>
+
+
+using namespace std;
+
+
+int main() 
+{
+
+int i;
+ 
+ for(i=10;i>=1;i--)
+
+   printf(" %d ",i);
+
+
+}
+
+--------------------------------------------------------------
+PRINT ALPHABETS AND THEIR ASCII VALUES IN DESCENDING ORDER
+#include <iostream>
+
+
+using namespace std;
+
+
+int main() 
+{
+
+int i;
+ 
+ for(i=122;i>=97;i--)
+
+   printf(" %c=%d ",char(i),i);
+
+
+}
+
+---------------------------------------------------------------
