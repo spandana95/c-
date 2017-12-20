@@ -46,6 +46,26 @@ Expected Output :
 The sum of 10 no is : 55 
 The Average is : 5.500000
 
+Sol:
+#include<stdio.h>
+
+int main() {
+   int n, i,sum=0;
+   float p;
+   for(i=1;i<=10;i++)
+   {
+       scanf("%d",&n);
+       printf("Number-%d : %d \n",i,n);
+       
+       sum=sum+n;
+       
+   }
+   p=sum/10;
+   printf("The sum of 10 natural numbers : %d \n",sum);
+   printf("The average of 10 numbers is : %f \n ",p);
+    
+}
+
 ---------------------------------------------------------------------------------------------------------------------------------------
 4.Write a program in C to display the cube of the number upto given an integer. Go to the editor
 Test Data :
@@ -97,12 +117,6 @@ for(i=1;i<=n;i++)
     printf("\n");
 }
 }
----------------------------------------------------------------------------------------------------------------------------------------
- 6.Write a C program to convert a string to a long integer. 
-
-Expected Output :
-
-In decimals: 2016, 4235440, -3624422, 5947391.
 ---------------------------------------------------------------------------------------------------------------------------------------
 Write a C program to accept two integers and check whether they are equal or not.
 Sol:
@@ -170,33 +184,35 @@ scanf("%d",&i);
 ---------------------------------------------------------------------------------------------------------------------------------------
 Write a program in C to calculate and print the Electricity bill of a given customer. The customer id., name and unit consumed by the 
 user should be taken from the keyboard and display the total amount to pay to the customer.
+Sol:
 #include <iostream>
-#include <ctype.h>
+
 using namespace std;
 
 int main() {
 int i,j,amt,surge,total;
-char s;
-scanf("%d %s %d",&i,&s,&j);
+char s[10];
+scanf("%d %s %d",&i,s,&j);
+   printf("Customer IDNO :%d\n",i);
+   printf("Customer Name :%s\n",s);
+   printf("Unit Consumed :%d\n",j);
    if ( j <= 199)
-   {
-      amt = j * 1.2;
+    {  amt = j * 1.2;
+      printf("Amount Charges @Rs. 1.20 per unit :%d",amt); }
     else if ( j>199 && j<400)
-       amt = j * 1.5;
+     {  amt = j * 1.5;
+     printf("Amount Charges @Rs. 1.50 per unit :%d",amt); }
     else if ( j>=400 && j<600)
-       amt = j * 1.8; 
+     {  amt = j * 1.8; 
+     printf("Amount Charges @Rs. 1.80 per unit :%d",amt); }
     else if ( j>=600)
-       amt = j * 2; 
-   }
-    if ( amt > 400 )   
-       surge = amt * 0.15;
-    if  ( surge >= 100 )
-     total = amt + surge;
+    {   amt = j * 2; 
+     printf("Amount Charges @Rs. 2.00 per unit :%d",amt); }
+     if ( amt > 400 )   
+      { surge = amt * 0.15;
+       printf("\nSurchage Amount :%d",surge); }
+     if  ( surge >= 100 )
+      { total = amt + surge;  
+        printf("\nNet Amount Paid By the Customer :%d",total); }
      
-     printf("Customer IDNO :%d",i);
-     printf("Customer Name :%s",s);
-     printf("unit Consumed :%d",j);
-     printf("Amount Charges @Rs. 2.00 per unit :%d",amt);
-     printf("Surchage Amount :%d",surge);
-     printf("Net Amount Paid By the Customer :%d",total);
 }
