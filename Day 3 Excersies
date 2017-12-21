@@ -65,3 +65,49 @@ int main() {
    }
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
+Break statement
+Sol:
+#include<stdio.h>
+
+int main() {
+    int i;
+    int a[10];
+    int sum=0;
+    printf("\nEnter 10 numbers");
+    for(i=0;i<10;i++)
+    {
+        scanf("%d",&a[i]);
+        if(a[i]<0)
+        {
+            printf("\nNegative");
+            break;
+        }
+        sum=sum+a[i];
+       
+    }
+     printf("sum: %d",sum);
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Continue statement
+Sol:
+#include<stdio.h>
+
+int main() {
+    int i;
+    int a[10];
+    int sum=0;
+    printf("\nEnter 10 numbers");
+    for(i=0;i<10;i++)
+    {
+        scanf("%d",&a[i]);
+        if(a[i]<0)
+        {
+            printf("\nNegative");
+            continue;
+        }
+        sum=sum+a[i];
+       
+    }
+     printf("sum: %d",sum);
+}
+----------------------------------------------------------------------------------------------------------------------------------------
