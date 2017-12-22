@@ -151,4 +151,54 @@ printf("%d %d %d %d %d %d %d",sun,mon,tues,wed,thur,fri,sat);
 return 0;
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
-9. 
+9. Error handling in files
+Sol:
+#include<stdio.h>
+#include<string.h>
+#include<errno.h>
+
+int main()
+{
+FILE *fp;
+clrscr();
+fp = fopen("info.txt","r+");
+
+printf("Value of errno: %d\n",errno);
+printf("The error message:%s\n",strerror(errno));
+perror("Message from perror");
+fclose(fp);
+
+return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+10. To find address of pointer and value of pointer
+Sol:
+#include<stdio.h>
+
+void main()
+{
+int i=25,*p,**p2;
+clrscr();
+p=&i;
+p2=&p;
+printf("Address of number variable is %x\n",&i);
+printf("Address of p variable is %x\n",p);
+printf("Value of *p variable is %d\n",*p);
+printf("Address of p2 variable is %x\n",p2);
+printf("Value of **p2 variable is %d\n",*p);
+}
+---------------------------------------------------------------------------------------------------------------------------------------
+11. Addition of pointer address
+Sol:
+#include<stdio.h>
+
+void main()
+{
+int i=25,*p;
+clrscr();
+p=&i;
+printf("Address of number variable is %u\n",p);
+p=p+5;
+printf("Address of number variable after addition is %u\n",p);
+}
+----------------------------------------------------------------------------------------------------------------------------------------
