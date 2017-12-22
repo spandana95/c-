@@ -1,0 +1,93 @@
+Call by value 
+Sol:
+#include<stdio.h>
+
+void main()
+{
+int i=2;
+sum(i);
+clrscr();
+printf("%d",i);
+}
+ sum(int i)
+{
+i=i+1;
+printf("%d",i);
+return;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Call by reference
+Sol:
+#include<stdio.h>
+
+void main()
+{
+int i=2;
+sum(&i);
+clrscr();
+printf("%d",i);
+}
+int sum(int *i)
+{
+*i=*i+2;
+printf("%d",i);
+return *i;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Calling function - Called function
+Sol:
+#include<stdio.h>
+
+void main()
+{
+int i;
+scanf("%d",&i);
+clrscr();
+abc(i);
+printf("%d\nexecuted",i);
+}
+int abc(int i)
+{
+ int j;
+ bbc(j);
+ return i;
+}
+int bbc(int j)
+{
+j=j+2;
+return j;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Global,Local,Constant,#define,ternary programs:
+Sol:
+#include<stdio.h>
+float pi=3.14;
+void main()
+{
+int r=7;
+float area;
+clrscr();
+area = pi * r * r;
+printf("%.2f",area);
+}
+
+#include<stdio.h>
+#define name "Spandana"
+#define loc "HYD"
+void main()
+{
+clrscr();
+printf("%s is living in %s.",name,loc);
+}
+
+#include<stdio.h>
+
+void main()
+{
+int a,b,c;
+clrscr();
+scanf("%d %d",&a,&b);
+ c = a>b?a:b;
+printf("Largest value : %d\n",c);
+}
+----------------------------------------------------------------------------------------------------------------------------------------
